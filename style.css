@@ -1,0 +1,244 @@
+:root {
+    --theme: #5c715e;
+    --font-color: #0b272d;
+    --background: #d6e4ba;
+    --card-color: rgba(0,0,0,.09);
+    --card-border: #8fbc8f;
+}
+
+body {
+
+    background-color: var(--background);
+    color: var(--font-color);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--theme);
+    z-index: 10;
+}
+
+nav {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    height: 40px;
+    line-height: 2.2em;
+    vertical-align: middle;
+}
+
+main {
+    margin: auto;
+    width: 85vw;
+    display: grid;
+    grid-template-rows: 0.01fr 2fr 2fr 2.5fr .3fr 2fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "name"
+        "about"
+        "papers"
+        "experience"
+        "hobbies"
+        "collection"
+        "blogs";
+}
+
+footer {
+    background-color: var(--theme);
+    color: white;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+#name {
+    grid-area: name;
+    text-align: center;
+}
+#about {
+    grid-area: about;
+    height: 360px;
+    margin-top: 190px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+#profilepic {
+    background-image: url('/EinsteinPorfolio/image/einsteinProfile.jpg');
+    background-size: cover;
+    background-position-y: center;
+    height: 350px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+    top: -50%;
+    right: -34%;
+}
+
+#aboutme {
+    position: relative;
+    top: -50%;
+}
+
+#papers {
+    grid-area: papers;
+    display: grid;
+    grid-template-areas: 
+        "vol1 vol2 vol3 vol4"
+        "vol5 vol6 vol7 vol8";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-gap: 1em;
+    overflow: hidden;
+}
+
+.card .head {
+    position: absolute;
+    float: left;
+    color: var(--font-color);
+    margin-top: -23px;
+    margin-left: 10px;
+    background-color: var(--background);
+
+}
+.paper {
+    height: 250px;
+    width: 200px;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: end;
+}
+.paper a {
+    color: black;
+    text-decoration: none;
+}
+
+.paperLink {
+    background-color: rgba(250,250,250,.7);
+}
+
+#vol1 {
+    grid-area: vol1;
+    background: url('image/vol1.png');
+    background-size: contain;
+}
+
+#vol2 {
+    grid-area: vol2;
+    background: url('image/vol2.png');
+    background-size: contain;
+}
+
+#vol3 {
+    grid-area: vol3;
+    background: url('image/vol3.png');
+    background-size: contain;
+}
+
+#vol4 {
+    grid-area: vol4;
+    background: url('image/vol4.png');
+    background-size: contain;
+}
+
+#vol5 {
+    grid-area: vol5;
+    background: url('image/vol5.png');
+    background-size: contain;
+}
+
+#vol6 {
+    grid-area: vol6;
+    background: url('image/vol6.png');
+    background-size: contain;
+}
+
+#vol7 {
+    grid-area: vol7;
+    background: url('image/vol7.png');
+    background-size: contain;
+}
+
+#vol8 {
+    grid-area: vol8;
+    background: url('image/vol8a.png');
+    background-size: contain;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+.work {
+    border: 1px solid var(--font-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.sp_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+#hobbies {
+    grid-area: hobbies;
+}
+
+.hobby {
+    display: inline-block;
+    background-color: var(--font-color);
+    color: white;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 5px;
+    margin: 5px;
+}
+
+#collection {
+    grid-area: collection;
+}
+
+#collection img {
+    max-height: 100%;
+    max-width: 100%;
+}
+#collection div{
+    display: inline-block;
+}
+
+#blogs {
+    grid-area: blogs;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog {
+    display: inline-block;
+    width: 47%;
+    height: 200px;
+    border: 1px solid var(--theme);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.blog a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.card {
+    background-color: var(--card-color);
+    border: 1px solid var(--card-border);
+    margin-top: 10vh;
+    border-radius: 10px;
+    padding: 10px;
+}
