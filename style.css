@@ -64,14 +64,14 @@ footer {
 }
 #about {
     grid-area: about;
-    height: 360px;
+    height: 28rem;
     margin-top: 190px;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1.5fr 1fr;
 }
 
 #profilepic {
-    background-image: url('/EinsteinPorfolio/image/einsteinProfile.jpg');
+    background-image: url('/image/einsteinProfile.jpg');
     background-size: cover;
     background-position-y: center;
     height: 350px;
