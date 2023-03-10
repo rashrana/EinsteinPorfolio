@@ -14,18 +14,19 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#about" class="navItem">About</a>
-            <a href="#papers" class="navItem">Papers</a>
-            <a href="#experience" class="navItem">Experience</a>
-            <a href="#hobbies" class="navItem">Hobbies</a>
-            <a href="#collections" class="navItem">Collections</a>
-            <a href="#blogs" class="navItem">Blogs</a>
+        <nav id="navBar" class="nav">
+            <div class="burger"><a href="javascript:void(0);" onclick="openMenu()"><span class="material-icons">menu</span></a></div>
+            <div class="navItem" ><a href="#about"onclick="closeMenu()">About</a></div>
+            <div class="navItem"><a href="#papers" onclick="closeMenu()">Papers</a></div>
+            <div class="navItem"><a href="#experience" onclick="closeMenu()">Experience</a></div>
+            <div class="navItem"><a href="#hobbies" onclick="closeMenu()">Hobbies</a></div>
+            <div class="navItem"><a href="#collections" onclick="closeMenu()">Collections</a></div>
+            <div class="navItem"><a href="#blogs" onclick="closeMenu()">Blogs</a></div>
         </nav>
     </header>
     <main>
         <div>
-            <h1 id="name"><b>Albert Einstein</b></h1>
+            <h1 id="name"><b>ALBERT EINSTEIN</b></h1>
         </div>
         <div id="about" class="card">
             <div id="profilepic"></div>

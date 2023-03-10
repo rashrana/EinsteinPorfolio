@@ -10,6 +10,7 @@ body {
 
     background-color: var(--background);
     color: var(--font-color);
+    font-family: 'Sriracha', cursive;
 }
 
 header {
@@ -98,11 +99,20 @@ footer {
     overflow: hidden;
 }
 
+.ptitle {
+    width: 100%;
+    text-align: center;
+}
+
+.open-icon {
+    display: block;
+    text-align: center;
+}
 .card .head {
     position: absolute;
     float: left;
     color: var(--font-color);
-    margin-top: -23px;
+    margin-top: -38px;
     margin-left: 10px;
     background-color: var(--background);
 
@@ -224,10 +234,11 @@ footer {
 .blog {
     display: inline-block;
     width: 47%;
-    height: 200px;
+    height: max-content;
     border: 1px solid var(--theme);
     border-radius: 10px;
     padding: 10px;
+    margin: 5px;
 }
 
 .blog a {
@@ -241,4 +252,78 @@ footer {
     margin-top: 10vh;
     border-radius: 10px;
     padding: 10px;
+}
+
+.burger{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .navItem {
+        display: none;
+    }
+    .responsive {
+        display: block;
+        width: 100%;
+    }
+
+    .burger{
+        display: inline;
+        margin: auto;
+    }
+
+    main {
+        grid-template-rows: 0.2fr 1.3fr 1fr 1.5fr 0.2fr 1.5fr 0.8fr;
+    }
+
+    #profilepic {
+        height: 20vw;
+        width: 20vw;
+        top: -15vw;
+        right: -30vw;
+    }
+
+    #about {
+        height: fit-content;
+        margin-top: 18vw;
+    }
+    #aboutme {
+        top: -8vw;
+    }
+
+    #papers {
+        grid-template-areas: 
+        "vol1 vol2"
+        "vol3 vol4"
+        "vol5 .";
+        grid-gap: .2em;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .paper {
+        height: 40vw;
+        width: 80%;
+    }
+
+    #collections img {
+        max-height: 48%;
+        max-width: 48%;
+    }
+
+    #blogs {
+        flex-direction: column;
+    }
+
+    .blog {
+        width: 95%;
+        height: fit-content;
+    }
+
 }
