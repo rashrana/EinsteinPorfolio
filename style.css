@@ -71,7 +71,7 @@ footer {
 }
 
 #profilepic {
-    background-image: url('/image/einsteinProfile.jpg');
+    background-image: url('image/einsteinProfile.jpg');
     background-size: cover;
     background-position-y: center;
     height: 350px;
@@ -279,14 +279,14 @@ footer {
     }
 
     main {
-        grid-template-rows: 0.2fr 1.3fr 1fr 1.5fr 0.2fr 1.5fr 0.8fr;
+        grid-template-rows: 0.1fr 0.8fr 0.8fr 0.9fr 0.1fr 0.5fr 0.5fr;
     }
 
     #profilepic {
-        height: 20vw;
-        width: 20vw;
-        top: -15vw;
-        right: -30vw;
+        height: 30vw;
+        width: 30vw;
+        top: -20vw;
+        right: -24vw;
     }
 
     #about {
@@ -297,6 +297,20 @@ footer {
         top: -8vw;
     }
 
+    
+
+    #blogs {
+        flex-direction: column;
+    }
+
+    .blog {
+        width: 95%;
+        height: fit-content;
+    }
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 1000px) {
     #papers {
         grid-template-areas: 
         "vol1 vol2"
@@ -316,14 +330,29 @@ footer {
         max-height: 48%;
         max-width: 48%;
     }
+}
 
-    #blogs {
-        flex-direction: column;
+@media only screen and (max-width: 359px) {
+    nav {
+        width: 100%;
+    }
+    #papers {
+        grid-template-areas: 
+        "vol1"
+        "vol2"
+        "vol3"
+        "vol4"
+        "vol5";
+        grid-gap: .2em;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
-    .blog {
-        width: 95%;
-        height: fit-content;
+    .papers {
+        width: 90%;
     }
 
+    main {
+        padding-right: 5px;
+    }
 }
